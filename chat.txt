@@ -1,0 +1,3 @@
+Our website provides comprehensive roadmaps for tech-related careers, including software development, web development, and more. With detailed guides, resources, and step-by-step plans, we help users navigate their career paths in the tech industry.
+
+When questions are asked, the chatbot will analyze the context to determine the relevant domain, ensuring accurate and helpful responses tailored to software development, web development, or other tech-related fields.

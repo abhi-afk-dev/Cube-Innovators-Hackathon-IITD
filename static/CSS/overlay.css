@@ -1,0 +1,130 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+#closeOverlay {
+    width: 28px;
+    height: 27px;
+    border: none;
+    background-color: transparent;
+    stroke-width: 2px;
+    stroke: #000000;
+}
+
+.godfather {
+    display: inline-flex;
+    padding: 40px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 60px;
+}
+
+.image-portion {
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.signup-portion {
+    display: flex;
+    width: 400px;
+    height: 480px;
+    padding: 40px 0px 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.signup-login {
+    display: flex;
+    padding: 8px 6px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 50px;
+    border-radius: 15px;
+    border: 2px solid #000;
+}
+
+.number>input {
+border-radius: 15px;
+    width: 350px;
+    height: 50px;
+    padding: 0px;
+}
+
+#login-details {
+    display: flex;
+    padding: 38px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.sec-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.sec-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sec-3 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.signup-login button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-login button.active-tab {
+    background-color: #ddd;
+    font-weight: bold;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.form-container {
+    display: block;
+}
+
+.form-container.hidden {
+    display: none;
+}

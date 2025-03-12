@@ -1,0 +1,174 @@
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+            flex-direction: column; /* Align items vertically */
+            gap: 20px; /* Spacing between container and footer */
+        }
+
+        .roadmap-container {
+            width: 800px; /* Adjust width as needed */
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative; /* For positioning arrows */
+        }
+
+        .roadmap-section {
+            flex: 1 0 300px; /* Adjust width as needed */
+            margin-bottom: 40px; /* Space for arrows */
+        }
+
+        .roadmap-section h3 {
+            background-color: #000000;
+            padding: 8px;
+            margin: 0;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .roadmap-section ul {
+            list-style-type: none;
+            padding: 5px 10px;
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+        }
+
+        .roadmap-section li {
+            padding: 3px 0;
+        }
+
+        .color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .color-box.html { background-color: #e57373; }
+        .color-box.css { background-color: #81c784; }
+        .color-box.js { background-color: #ffb74d; }
+        .color-box.frameworks { background-color: #64b5f6; }
+        .color-box.tools { background-color: #a1887f; }
+        .color-box.testing { background-color: #ce93d8; }
+        .color-box.performance { background-color: #4db6ac; }
+
+        .roadmap-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #ccc;
+            flex-basis: 100%; /* Footer takes full width */
+        }
+
+        /* Arrows */
+        .arrow {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #000000; /* Match arrow color to section heading */
+        }
+
+        .roadmap-section:nth-child(1) .arrow {
+            top: 100%; /* Below first section */
+        }
+
+        .roadmap-section:nth-child(2) .arrow {
+            top: 100%;
+        }
+
+        .roadmap-section:nth-child(3) .arrow {
+            top: 100%;
+        }
+
+        /* ... (Add arrows for other sections) */
+
+    </style>
+</head>
+<body>
+    <div class="roadmap-container">
+        <div class="roadmap-section">
+            <h3><span class="color-box html"></span>HTML</h3>
+            <ul>
+                <li>Semantic HTML</li>
+                <li>Forms & Validation</li>
+                <li>Accessibility</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box css"></span>CSS</h3>
+            <ul>
+                <li>Layouts (Flexbox, Grid)</li>
+                <li>Responsive Design</li>
+                <li>CSS Preprocessors</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box js"></span>JavaScript</h3>
+            <ul>
+                <li>DOM Manipulation</li>
+                <li>ES6+ Features</li>
+                <li>Asynchronous JS</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box frameworks"></span>Frontend Frameworks</h3>
+            <ul>
+                <li>React/Vue/Angular</li>
+                <li>State Management</li>
+                <li>Routing</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box tools"></span>Build Tools</h3>
+            <ul>
+                <li>Webpack/Parcel</li>
+                <li>NPM/Yarn</li>
+                <li>Task Runners</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box testing"></span>Testing</h3>
+            <ul>
+                <li>Unit Testing</li>
+                <li>Integration Testing</li>
+                <li>End-to-End Testing</li>
+            </ul>
+            <div class="arrow"></div> 
+        </div>
+
+        <div class="roadmap-section">
+            <h3><span class="color-box performance"></span>Web Performance</h3>
+            <ul>
+                <li>Optimization</li>
+                <li>Lighthouse</li>
+                <li>Lazy Loading</li>
+            </ul>
+        </div>
+    </div>
+</body>

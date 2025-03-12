@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript Road-map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+        
+        .header h2 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-top: 0;
+        }
+        
+        .roadmap-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .roadmap-item {
+            text-align: center;
+            width: 22%;
+            position: relative;
+        }
+        
+        .icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        .html-css {
+            background-color: #e44d26;
+        }
+        
+        .js-basics {
+            background-color: #f0db4f;
+            color: black !important;
+        }
+        
+        .practice {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            color: black !important;
+        }
+        
+        .ux {
+            background-color: #9c27b0;
+        }
+        
+        .advanced-js {
+            background-color: #61dafb;
+        }
+        
+        .js-libraries {
+            background-color: #f0db4f;
+            color: black !important;
+        }
+        
+        .advanced-practice {
+            background-color: #dd4b39;
+        }
+        
+        .system-architecture {
+            background-color: #0277bd;
+        }
+        
+        .system-design {
+            background-color: #00bcd4;
+        }
+        
+        .ui-frameworks {
+            background-color: #7986cb;
+        }
+        
+        .nodejs {
+            background-color: #8bc34a;
+        }
+        
+        .mobile {
+            background-color: #ff9800;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .item-description {
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        
+        .horizontal-arrow {
+            position: absolute;
+            top: 35px;
+            height: 3px;
+            background-color: black;
+            z-index: 1;
+        }
+        
+        .horizontal-arrow::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid black;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        
+        .vertical-arrow {
+            position: absolute;
+            left: 50%;
+            width: 3px;
+            height: 30px;
+            background-color: black;
+            z-index: 1;
+        }
+        
+        .vertical-arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: -8.5px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid black;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+        
+        .arrow-right-1-1 {
+            left: 22%;
+            width: 10%;
+        }
+        
+        .arrow-right-1-2 {
+            left: 47%;
+            width: 10%;
+        }
+        
+        .arrow-right-1-3 {
+            left: 72%;
+            width: 10%;
+        }
+        
+        .arrow-down-1 {
+            top: 130px;
+        }
+        
+        .arrow-left-2-1 {
+            left: 22%;
+            width: 10%;
+            transform: rotate(180deg);
+        }
+        
+        .arrow-left-2-2 {
+            left: 47%;
+            width: 10%;
+            transform: rotate(180deg);
+        }
+        
+        .arrow-left-2-3 {
+            left: 72%;
+            width: 10%;
+            transform: rotate(180deg);
+        }
+        
+        .arrow-down-2 {
+            top: 290px;
+        }
+        
+        .arrow-right-3-1 {
+            left: 22%;
+            width: 10%;
+        }
+        
+        .arrow-right-3-2 {
+            left: 47%;
+            width: 10%;
+        }
+        
+        .arrow-right-3-3 {
+            left: 72%;
+            width: 10%;
+        }
+        
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .codehub {
+            display: flex;
+            align-items: center;
+        }
+        
+        .codehub-logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .source-code {
+            color: #721c24;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Learning JavaScript</h1>
+            <h2>Road-map</h2>
+        </div>
+        
+        <!-- First Row -->
+        <div class="roadmap-row">
+            <div class="roadmap-item">
+                <div class="icon html-css">&lt;/&gt;</div>
+                <div class="item-title">HTML and CSS</div>
+                <div class="item-description">Syntax, Structure, Responsive Design, Bootstrap</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-1-1"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon js-basics">{JS}</div>
+                <div class="item-title">JavaScript Basics</div>
+                <div class="item-description">Syntax, Data Types, Method, Arrays Objects, AAX and DOM</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-1-2"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon practice">⚙️</div>
+                <div class="item-title">Practice and Exercises</div>
+                <div class="item-description">Responsive Page Layout and Menus, UI Components, Form Manipulation (Login, Register)</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-1-3"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon ux">🖌️</div>
+                <div class="item-title">UX Design</div>
+                <div class="item-description">UI Theory, Design Psychology, Project Design</div>
+                <div class="vertical-arrow arrow-down-1"></div>
+            </div>
+        </div>
+        
+        <!-- Second Row -->
+        <div class="roadmap-row">
+            <div class="roadmap-item">
+                <div class="icon system-architecture">📱</div>
+                <div class="item-title">System Architecture</div>
+                <div class="item-description">System Architecture and Architectural Patterns</div>
+                <div class="vertical-arrow arrow-down-2"></div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-left-2-1"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon advanced-practice">⚙️</div>
+                <div class="item-title">Advanced Practice</div>
+                <div class="item-description">Data Manipulation and Representation, Async Operations, Search Functionality, Service Integration</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-left-2-2"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon js-libraries">{JS}</div>
+                <div class="item-title">JS Libraries</div>
+                <div class="item-description">NPM, Grunt, PojS, Lodash, Underscore, Moment, D3, Charts</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-left-2-3"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon advanced-js">{JS}</div>
+                <div class="item-title">Advanced JavaScript</div>
+                <div class="item-description">Scopes, Closures, Promises, ES6, Arrow Functions, IIFES, OOP</div>
+            </div>
+        </div>
+        
+        <!-- Third Row -->
+        <div class="roadmap-row">
+            <div class="roadmap-item">
+                <div class="icon system-design">💻</div>
+                <div class="item-title">System Design</div>
+                <div class="item-description">Requirements, Design Patterns</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-3-1"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon ui-frameworks">🌐</div>
+                <div class="item-title">UI Frameworks</div>
+                <div class="item-description">VueJs, ReactJs, AngularJs, Material Design</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-3-2"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon nodejs">🟢</div>
+                <div class="item-title">Node.JS and Express.JS</div>
+                <div class="item-description">Server-side JS, Derby, Meteor, Isomorphic Applications</div>
+            </div>
+            
+            <div class="horizontal-arrow arrow-right-3-3"></div>
+            
+            <div class="roadmap-item">
+                <div class="icon mobile">📱</div>
+                <div class="item-title">Mobile Development</div>
+                <div class="item-description">React-Native or Ionic, Mobile Native Applications</div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #464646;
+}
+.container {
+    width: 100vw;
+}
+
+nav {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.frame1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0c0c0c;
+    height: 100px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+.frame1 button{
+    margin-right: 20px;
+    padding: 5px 22px;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.frame2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.frame3 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 50px 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.frame3a {
+    border-radius: 20px;
+    background: linear-gradient(180deg, #7693FC 0%, #0025AB 51.5%, #0837DD 100%);
+    display: flex;
+    padding: 20px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame3b {
+    display: flex;
+    padding: 0px 40px;
+    justify-content: flex-end;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.frame3b button {
+    padding: 18px 48px;
+    color: #000;
+    font-family: "Roboto Condensed";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+h2 {
+    color: #FFF;
+    font-family: "Roboto Condensed";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

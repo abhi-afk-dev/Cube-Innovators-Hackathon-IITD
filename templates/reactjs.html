@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React.js Roadmap</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #f0f3f8;
+    }
+    
+    .container {
+      margin: 0 auto;
+    }
+    
+    .header {
+      background-color: #26235e;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header-text {
+      flex: 1;
+    }
+    
+    .header h1 {
+      font-size: 4rem;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .header-image {
+      flex: 1;
+      text-align: right;
+    }
+    
+    .header-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 30px 20px;
+    }
+    
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .step-number {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-right: 10px;
+      width: 40px;
+      text-align: center;
+    }
+    
+    .step-content {
+      flex: 1;
+      display: flex;
+      height: 50px;
+      position: relative;
+    }
+    
+    .step-arrow {
+      width: 15px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .step-arrow::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      transform: rotate(45deg);
+      top: 10px;
+      left: -15px;
+    }
+    
+    .step-text {
+      color: white;
+      padding: 0 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      min-width: 200px;
+    }
+    
+    /* Step colors */
+    .step-1 .step-number { color: #f5445c; }
+    .step-1 .step-text, .step-1 .step-arrow::after { background-color: #f5445c; }
+    
+    .step-2 .step-number { color: #26b3b3; }
+    .step-2 .step-text, .step-2 .step-arrow::after { background-color: #26b3b3; }
+    
+    .step-3 .step-number { color: #182b63; }
+    .step-3 .step-text, .step-3 .step-arrow::after { background-color: #182b63; }
+    
+    .step-4 .step-number { color: #f66c20; }
+    .step-4 .step-text, .step-4 .step-arrow::after { background-color: #f66c20; }
+    
+    .step-5 .step-number { color: #f66c20; }
+    .step-5 .step-text, .step-5 .step-arrow::after { background-color: #f66c20; }
+    
+    .step-6 .step-number { color: #4cb543; }
+    .step-6 .step-text, .step-6 .step-arrow::after { background-color: #4cb543; }
+    
+    .step-7 .step-number { color: #857363; }
+    .step-7 .step-text, .step-7 .step-arrow::after { background-color: #857363; }
+    
+    .step-8 .step-number { color: #3c3396; }
+    .step-8 .step-text, .step-8 .step-arrow::after { background-color: #3c3396; }
+    
+    .step-9 .step-number { color: #3c3396; }
+    .step-9 .step-text, .step-9 .step-arrow::after { background-color: #3c3396; }
+    
+    .step-10 .step-number { color: #857363; }
+    .step-10 .step-text, .step-10 .step-arrow::after { background-color: #857363; }
+    
+    .step-11 .step-number { color: #4cb543; }
+    .step-11 .step-text, .step-11 .step-arrow::after { background-color: #4cb543; }
+    
+    .step-12 .step-number { color: #f66c20; }
+    .step-12 .step-text, .step-12 .step-arrow::after { background-color: #f66c20; }
+    
+    .step-13 .step-number { color: #f66c20; }
+    .step-13 .step-text, .step-13 .step-arrow::after { background-color: #f66c20; }
+    
+    .step-14 .step-number { color: #182b63; }
+    .step-14 .step-text, .step-14 .step-arrow::after { background-color: #182b63; }
+    
+    .step-15 .step-number { color: #26b3b3; }
+    .step-15 .step-text, .step-15 .step-arrow::after { background-color: #26b3b3; }
+    
+    .step-16 .step-number { color: #f5445c; }
+    .step-16 .step-text, .step-16 .step-arrow::after { background-color: #f5445c; }
+    
+    .footer {
+      background-color: #26235e;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .roadmap {
+        grid-template-columns: 1fr;
+      }
+      
+      .header {
+        flex-direction: column;
+      }
+      
+      .header-image {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-text">
+        <h1>React.js<br>Roadmap</h1>
+      </div>
+         </div>
+    
+    <div class="roadmap">
+      <!-- Left Column -->
+      <div class="left-column">
+        <div class="step step-1">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-text">JAVASCRIPT MASTERY</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-2">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-text">HTML AND CSS FUNDAMENTALS</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-3">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-text">NODE.JS AND NPM INSTALLATION</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-4">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-text">REACT BASICS</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-5">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-text">CREATE REACT APP</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-6">
+          <div class="step-number">06</div>
+          <div class="step-content">
+            <div class="step-text">COMPONENTS AND PROPS</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-7">
+          <div class="step-number">07</div>
+          <div class="step-content">
+            <div class="step-text">STATE AND LIFECYCLE</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-8">
+          <div class="step-number">08</div>
+          <div class="step-content">
+            <div class="step-text">HOOKS</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="right-column">
+        <div class="step step-9">
+          <div class="step-number">09</div>
+          <div class="step-content">
+            <div class="step-text">ROUTING WITH REACT ROUTER</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-10">
+          <div class="step-number">10</div>
+          <div class="step-content">
+            <div class="step-text">API DATA FETCHING</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-11">
+          <div class="step-number">11</div>
+          <div class="step-content">
+            <div class="step-text">FORMS AND CONTROLLED COMPONENTS</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-12">
+          <div class="step-number">12</div>
+          <div class="step-content">
+            <div class="step-text">STATE MANAGEMENT WITH CONTEXT API/REDUX</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-13">
+          <div class="step-number">13</div>
+          <div class="step-content">
+            <div class="step-text">STYLING WITH CSS-IN-JS OR CSS MODULES</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-14">
+          <div class="step-number">14</div>
+          <div class="step-content">
+            <div class="step-text">TESTING WITH JEST AND REACT TESTING LIBRARY</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-15">
+          <div class="step-number">15</div>
+          <div class="step-content">
+            <div class="step-text">OPTIMIZATION TECHNIQUES</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+        
+        <div class="step step-16">
+          <div class="step-number">16</div>
+          <div class="step-content">
+            <div class="step-text">DEPLOYMENT AND CONTINUOUS LEARNING</div>
+            <div class="step-arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

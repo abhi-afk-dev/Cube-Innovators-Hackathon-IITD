@@ -1,0 +1,170 @@
+/* style.css */
+/* *{
+    margin: 0;padding: 0;
+} */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.top-bar {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.top-bar button {
+    background-color: rgb(255, 187, 0);
+    border-radius: 20px;
+}
+
+nav {
+    color: #ffffff;
+    background-color: #0834D8;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.login {
+    padding-top: 5px;
+}
+
+.login button {
+    background-color: #05baf1;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 2px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #464141;
+}
+
+.hero {
+    background-color: #0834D8;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.buttons button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.hero-images {
+    border: 2px solid rgb(63, 61, 61);
+    width: 500px;
+    height: 300px;
+    background-image: url("/static/image/Responsive\ Design\ Mastery_\ 15\ Tools\ for\ Stunning\ Websites.jpeg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center center; */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.programs {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.program-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.program-buttons button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    width: 10%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}

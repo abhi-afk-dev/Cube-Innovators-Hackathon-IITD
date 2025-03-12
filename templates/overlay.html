@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSCUBE TECH Mentorship Program</title>
+    <link rel="stylesheet" href="/static/CSS/overlay.css">
+</head>
+
+<body>
+    <div class="godfather">
+        <div class="image-portion"> </div>
+
+        <div class="signup-portion">
+            <div style="display: flex;justify-content: flex-end;width: 100%;flex-direction: row;padding-right: 35px;">
+                <button id="closeOverlay"><img src="/static/image/Vector.svg" alt=""></button>
+            </div>
+            <div class="signup-login">
+                <div>
+                    <button id="loginTab" class="active-tab"
+                        style="border:none; background-color:white;border-radius: 20px;display: flex;padding: 5px 38px;justify-content: center;align-items: center;gap: 10px;">Signup</button>
+                </div>
+                <div>
+                    <button id="signupTab"
+                        style="border:none; display: flex;padding: 5px 39px;justify-content: center;align-items: center;gap: 10px;border-radius: 20px;background: #F00;">Login</button>
+                </div>
+            </div>
+
+            <div id="login-details" class="form-container">
+                <div class="sec-1">
+                    <h3
+                        style="color: #000;font-family: Inter;font-size: 20px;font-style: normal;font-weight: 600;line-height: normal;">
+                        Login</h3>
+                    <p
+                        style="color: #0F62FE;font-family: Inter;font-size: 12px;font-style: normal;font-weight: 400;line-height: normal;">
+                        use email, instead</p>
+                </div>
+                <div class="sec-2">
+                    <h4>Mobile Number</h4>
+                    <div class="number">
+                        <input type="number" placeholder="">
+                    </div>
+                </div>
+
+                <button onclick="window.location.href='/skills';"
+                    style="display: flex;padding: 11px 105px;justify-content: center;align-items: center;gap: 10px;align-self: stretch;border-radius: 15px;background: #194CFF;">Login</button>
+
+
+                <div class="sec-3">
+                    <p
+                        style="color: #000;font-family: Inter;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;">
+                        Don't have an account?</p>
+                    <p style="color: #194CFF; font-family:Inter; font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;">
+                        Signup</p>
+                </div>
+            </div>
+
+            <div id="signup-details" class="form-container hidden">
+                <p>Signup Form Content Goes Here</p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/logic/logic1.js"></script>
+</body>
+
+</html>
