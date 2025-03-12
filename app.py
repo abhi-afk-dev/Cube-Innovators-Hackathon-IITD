@@ -1,15 +1,7 @@
 from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
-import google.generativeai as genai
-
-# Directly set the API key (NOT RECOMMENDED for production)
-api_key = "YOUR_ACTUAL_API_KEY"  # Replace with your actual API key
-
-genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
 
 app = Flask(__name__)
-CORS(app)
+
 
 @app.route('/')
 def static_page():
